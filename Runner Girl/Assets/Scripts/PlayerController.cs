@@ -40,6 +40,10 @@ public class PlayerController : MonoBehaviour
             Debug.Log("TIKLANDI");
             
         }
+        else
+        {
+            touchXdelta = 0;
+        }
         newX = (transform.position.x + xspeed* touchXdelta*Time.deltaTime);
         newX = Mathf.Clamp(newX, -limitX, limitX);
         Vector3 newPosition = new Vector3(newX, transform.position.y, transform.position.z + runningSpeed * Time.deltaTime);
