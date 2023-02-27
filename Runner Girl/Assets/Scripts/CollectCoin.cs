@@ -27,6 +27,15 @@ public class CollectCoin : MonoBehaviour
             
         }
     }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.CompareTag("collision"))
+        {
+            Debug.Log("Game Over");
+        }
+    }
+
     public void Addcoin()
     {
         score++;
