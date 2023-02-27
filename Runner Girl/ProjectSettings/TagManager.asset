@@ -6,6 +6,7 @@ TagManager:
   tags:
   - coin
   - collision
+  - end
   layers:
   - Default
   - TransparentFX

@@ -3,12 +3,14 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class CollectCoin : MonoBehaviour
 {
     [SerializeField] private AudioSource coinSound;
     public int score;
     public TextMeshProUGUI coinText;
+    public PlayerController playerController;
     
     
     private void Start()
@@ -25,6 +27,10 @@ public class CollectCoin : MonoBehaviour
             coinSound.Play();
             Destroy(other.gameObject);
             
+        }else if (other.CompareTag("end"))
+        {
+            Debug.Log("tebriks");
+            playerController.runningSpeed = 0;
         }
     }
 
@@ -33,6 +39,7 @@ public class CollectCoin : MonoBehaviour
         if (collision.gameObject.CompareTag("collision"))
         {
             Debug.Log("Game Over");
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         }
     }
 
