@@ -12,12 +12,16 @@ public class CollectCoin : MonoBehaviour
     public TextMeshProUGUI coinText;
     public PlayerController playerController;
     public int maxScore = 20;
+    public Animator animator;
+    public GameObject player;
     
     
     
     private void Start()
     {
         coinSound = GetComponent<AudioSource>();
+        animator = player.GetComponentInChildren<Animator>();
+        
     }
     
 
@@ -35,11 +39,12 @@ public class CollectCoin : MonoBehaviour
             playerController.runningSpeed = 0;
             if (score>maxScore)
             {
-                Debug.Log("win");
+              animator.SetBool("win",true);
+                    
             }
-            else if (score<maxScore)
+            else 
             {
-                Debug.Log("lose");
+               animator.SetBool("lose",true);
             }
         }
     }
