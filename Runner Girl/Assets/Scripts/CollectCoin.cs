@@ -14,6 +14,7 @@ public class CollectCoin : MonoBehaviour
     public int maxScore = 20;
     public Animator animator;
     public GameObject player;
+    public GameObject endPanel;
     
     
     
@@ -37,6 +38,8 @@ public class CollectCoin : MonoBehaviour
         {
             Debug.Log("tebriks");
             playerController.runningSpeed = 0;
+            transform.Rotate(transform.rotation.x,180,transform.rotation.z,Space.Self);
+            endPanel.SetActive(true);
             if (score>maxScore)
             {
               animator.SetBool("win",true);
@@ -47,6 +50,11 @@ public class CollectCoin : MonoBehaviour
                animator.SetBool("lose",true);
             }
         }
+    }
+    
+    public void RestartGame()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 
     private void OnCollisionEnter(Collision collision)
