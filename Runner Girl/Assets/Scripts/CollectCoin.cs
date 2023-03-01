@@ -11,6 +11,8 @@ public class CollectCoin : MonoBehaviour
     public int score;
     public TextMeshProUGUI coinText;
     public PlayerController playerController;
+    public int maxScore = 20;
+    
     
     
     private void Start()
@@ -31,6 +33,14 @@ public class CollectCoin : MonoBehaviour
         {
             Debug.Log("tebriks");
             playerController.runningSpeed = 0;
+            if (score>maxScore)
+            {
+                Debug.Log("win");
+            }
+            else if (score<maxScore)
+            {
+                Debug.Log("lose");
+            }
         }
     }
 
