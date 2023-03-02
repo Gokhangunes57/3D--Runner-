@@ -11,7 +11,7 @@ public class CollectCoin : MonoBehaviour
     public int score;
     public TextMeshProUGUI coinText;
     public PlayerController playerController;
-    public int maxScore = 20;
+    public int maxScore = 30;
     public Animator animator;
     public GameObject player;
     public GameObject endPanel;
@@ -21,6 +21,7 @@ public class CollectCoin : MonoBehaviour
     private void Start()
     {
         coinSound = GetComponent<AudioSource>();
+       
         animator = player.GetComponentInChildren<Animator>();
         
     }
@@ -62,9 +63,16 @@ public class CollectCoin : MonoBehaviour
         if (collision.gameObject.CompareTag("collision"))
         {
             Debug.Log("Game Over");
+        
+           
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+           
+            
+            
+            
         }
     }
+
 
     public void Addcoin()
     {
