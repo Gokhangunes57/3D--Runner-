@@ -3977,8 +3977,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: -4, y: -5}
-  m_SizeDelta: {x: 184.5133, y: 72.3697}
+  m_AnchoredPosition: {x: -148.20001, y: 5.5999756}
+  m_SizeDelta: {x: 135.525, y: 72.3697}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &1009963234
 MonoBehaviour:
@@ -4027,8 +4027,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 36
-  m_fontSizeBase: 36
+  m_fontSize: 70
+  m_fontSizeBase: 70
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18.6
@@ -4063,7 +4063,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: 18.045746, w: 0}
+  m_margin: {x: 0, y: 0, z: -488.16675, w: -146.96497}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -5070,7 +5070,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   runningSpeed: 10
-  xspeed: 150
+  xspeed: 50
   limitX: 3.75
 --- !u!136 &1703632853
 CapsuleCollider:
@@ -5118,7 +5118,7 @@ MonoBehaviour:
   score: 0
   coinText: {fileID: 1009963234}
   playerController: {fileID: 1703632852}
-  maxScore: 20
+  maxScore: 30
   animator: {fileID: 0}
   player: {fileID: 1703632850}
   endPanel: {fileID: 180442992}
